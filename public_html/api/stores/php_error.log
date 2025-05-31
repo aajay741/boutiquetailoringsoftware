@@ -1,0 +1,67 @@
+======== NEW REQUEST ========
+Request method: OPTIONS
+Request time: 2025-05-28 20:01:00
+Handling OPTIONS request
+======== NEW REQUEST ========
+Request method: POST
+Request time: 2025-05-28 20:01:00
+Initiating main try block
+DB connect file included
+Raw input: {"store_name":"Thirupur","store_code":"SBT","phone_number":"6380338626","email":"ss@gmail.com","alternate_contact":"9344733645","address_line1":"Thirupur","address_line2":"Thirupurt","city":"Salem","d
+JSON decoded successfully
+Data: stdClass Object
+(
+    [store_name] => Thirupur
+    [store_code] => SBT
+    [phone_number] => 6380338626
+    [email] => ss@gmail.com
+    [alternate_contact] => 9344733645
+    [address_line1] => Thirupur
+    [address_line2] => Thirupurt
+    [city] => Salem
+    [district] => Salem
+    [state] => Tamil Nadu
+    [country] => India
+    [pincode] => 636303
+    [store_manager] => AJAY
+    [opening_date] => 2025-04-04
+    [working_hours] => 9:00 AM - 9:00 PM
+    [status] => Active
+)
+
+Getting DB connection
+DB connection established
+Preparing query: INSERT INTO stores (
+        store_name, store_code, phone_number, email, alternate_contact,
+        address_line1, address_line2, city, district, state, country,
+        pincode, store_manager, opening_date, working_hours, status
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Query prepared successfully
+Parameters to bind: Array
+(
+    [0] => Thirupur
+    [1] => SBT
+    [2] => 6380338626
+    [3] => ss@gmail.com
+    [4] => 9344733645
+    [5] => Thirupur
+    [6] => Thirupurt
+    [7] => Salem
+    [8] => Salem
+    [9] => Tamil Nadu
+    [10] => India
+    [11] => 636303
+    [12] => AJAY
+    [13] => 2025-04-04
+    [14] => 9:00 AM - 9:00 PM
+    [15] => Active
+)
+
+Binding parameters
+Parameters bound successfully
+Executing statement
+Store added successfully, ID: 9
+Closing statement
+Closing connection
+Script completed
+

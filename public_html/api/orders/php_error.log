@@ -1,0 +1,80 @@
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:32:59
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:33:50
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:35:06
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:35:53
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:36:29
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:37:58
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:38:36
+DB connected
+Fetched customer ID: 2
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:45:25
+DB connected
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:45:29
+DB connected
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-30 22:45:46
+DB connected
+======== NEW ORDER REQUEST ========
+Request method: POST
+Request time: 2025-05-31 08:11:19
+DB connected
+Transaction started
+Inserted new customer: 5
+Inserted order ID: 10
+Inserted particular ID: 18
+Inserted measurement ID: 9
+======== NEW ORDER REQUEST ========
+Request method: POST
+Request time: 2025-05-31 08:32:55
+DB connected
+Transaction started
+Inserted new customer: 6
+Inserted order ID: 11
+Inserted particular ID: 19
+Successfully saved image: 11/particulars/19/683aa2980d5e8.jpg
+Successfully saved image: 11/particulars/19/683aa2980e70f.jpg
+Inserted measurement ID: 10
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-31 08:35:08
+DB connected
+Fetched customer ID: 5
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-31 08:35:33
+DB connected
+Fetched customer ID: 5
+======== CUSTOMER DATA REQUEST ========
+Request method: GET
+Request time: 2025-05-31 08:35:37
+DB connected
+Fetched customer ID: 6

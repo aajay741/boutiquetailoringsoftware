@@ -1,0 +1,6 @@
+[31-May-2025 09:02:58 Europe/Berlin] ======== LOGIN REQUEST START ========
+[31-May-2025 09:02:58 Europe/Berlin] DB connection file included
+[31-May-2025 09:02:58 Europe/Berlin] Exception: Invalid JSON data: Syntax error
+[31-May-2025 09:02:58 Europe/Berlin] Stack trace: #0 {main}
+[31-May-2025 09:02:58 Europe/Berlin] ======== LOGIN REQUEST END ========
+

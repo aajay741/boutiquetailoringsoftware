@@ -1,0 +1,1828 @@
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Attempting DB connection
+DB connected successfully
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 2
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 2 records
+Database connection closed
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 0 records
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 8 records
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 8 records
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 8 records
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Fetched 8 records
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Processed 6 purchases
+Database connection closed
+Script started
+Received master_id: 3
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing SQL query
+Binding parameters
+Executing query
+Processed 6 purchases
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052525
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Attempting DB connection
+DB connected successfully
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052523
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Attempting DB connection
+DB connected successfully
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Script started
+Received master_id: 1
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 0 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Error: Master ID is required
+Script started
+Received master_id: 
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Error: Master ID is required
+Script started
+Received master_id: 2
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 2
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052523
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052523
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052525
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052523
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052526
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Attempting DB connection
+DB connected successfully
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: 
+Pagination - page: 1, per_page: 6
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing basic info SQL query
+Binding parameters
+Executing query
+Processed 6 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052523
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Script started
+Received master_id: 3
+Received invoice_number: SA28052524
+Pagination - page: 1, per_page: 10
+Attempting DB connection
+DB connected successfully
+Database connection established
+Preparing full details SQL query
+Binding parameters
+Executing query
+Processed 1 records
+Database connection closed
+Attempting DB connection
+DB connected successfully
+Attempting DB connection
+DB connected successfully

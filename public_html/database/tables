@@ -1,0 +1,128 @@
+
+
+-- 3. Customers Table
+CREATE TABLE IF NOT EXISTS customers (
+    customer_id INT PRIMARY KEY AUTO_INCREMENT,
+    full_name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20) NOT NULL,
+    whatsapp VARCHAR(20),
+    address TEXT,
+    store_id INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (store_id) REFERENCES stores(store_id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+-- 4. Orders Table (Main order header)
+CREATE TABLE IF NOT EXISTS orders (
+    order_id INT PRIMARY KEY AUTO_INCREMENT,
+    customer_id INT NOT NULL,
+    order_taken_by INT NOT NULL, 
+    assigned_to INT NOT NULL,     
+    store_id INT NOT NULL,
+    taken_date DATE NOT NULL,
+    delivery_date DATE,
+    special_note TEXT,
+    advance DECIMAL(10,2) DEFAULT 0,
+    total_amount DECIMAL(10,2) DEFAULT 0,
+    balance_amount DECIMAL(10,2) DEFAULT 0,
+    status ENUM('pending', 'in_progress', 'completed', 'delivered') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id) ON DELETE CASCADE,
+    FOREIGN KEY (order_taken_by) REFERENCES users(id) ON DELETE RESTRICT,
+    FOREIGN KEY (assigned_to) REFERENCES users(id) ON DELETE RESTRICT,
+    FOREIGN KEY (store_id) REFERENCES stores(store_id) ON DELETE RESTRICT
+) ENGINE=InnoDB;
+
+-- 5. Order Particulars Table (Line items for each order)
+CREATE TABLE IF NOT EXISTS order_particulars (
+    particular_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    description TEXT NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+    status ENUM('pending', 'in_progress', 'completed', 'delivered') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 6. Measurements Table (Main measurements)
+CREATE TABLE IF NOT EXISTS measurements (
+    measurement_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    L VARCHAR(20),       -- Length
+    SH VARCHAR(20),      -- Shoulder
+    ARM VARCHAR(20),     -- Arm
+    UB VARCHAR(20),      -- Upper Body
+    MB VARCHAR(20),      -- Middle Body
+    W VARCHAR(20),       -- Waist
+    POINT VARCHAR(20),
+    FN VARCHAR(20),      -- Front Neck
+    BN VARCHAR(20),      -- Back Neck
+    HIP VARCHAR(20),
+    SEAT VARCHAR(20),
+    THIGH VARCHAR(20),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
+    UNIQUE KEY (order_id)  -- One measurement set per order
+) ENGINE=InnoDB;
+
+-- 7. SL Measurements Table (Sleeve measurements)
+CREATE TABLE IF NOT EXISTS sl_measurements (
+    sl_id INT PRIMARY KEY AUTO_INCREMENT,
+    measurement_id INT NOT NULL,
+    L VARCHAR(20),  -- Length
+    W VARCHAR(20),  -- Width
+    A VARCHAR(20),  -- Around
+    position INT,   -- To maintain order if multiple SL measurements exist
+    FOREIGN KEY (measurement_id) REFERENCES measurements(measurement_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 8. Custom Measurements Table
+CREATE TABLE IF NOT EXISTS custom_measurements (
+    custom_id INT PRIMARY KEY AUTO_INCREMENT,
+    measurement_id INT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    value VARCHAR(20) NOT NULL,
+    FOREIGN KEY (measurement_id) REFERENCES measurements(measurement_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 9. Order Images Table
+CREATE TABLE IF NOT EXISTS order_images (
+    image_id INT PRIMARY KEY AUTO_INCREMENT,
+    particular_id INT NOT NULL,
+    image_url VARCHAR(255) NOT NULL,  -- Path to stored image
+    thumbnail_url VARCHAR(255),       -- Path to thumbnail if generated
+    upload_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (particular_id) REFERENCES order_particulars(particular_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 10. Transactions Table (For payments)
+CREATE TABLE IF NOT EXISTS transactions (
+    transaction_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payment_method ENUM('cash', 'card', 'upi', 'bank_transfer'),
+    notes TEXT,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+-- 11. Status History Table (Optional - for tracking order status changes)
+CREATE TABLE IF NOT EXISTS order_status_history (
+    history_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    status ENUM('pending', 'in_progress', 'completed', 'delivered') NOT NULL,
+    changed_by INT, 
+    notes TEXT,
+    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE,
+    FOREIGN KEY (changed_by) REFERENCES users(id) ON DELETE SET NULL
+) ENGINE=InnoDB;
+
+-- Indexes for better performance
+CREATE INDEX idx_orders_customer ON orders(customer_id);
+CREATE INDEX idx_orders_store ON orders(store_id);
+CREATE INDEX idx_orders_status ON orders(status);
+CREATE INDEX idx_particulars_order ON order_particulars(order_id);
+CREATE INDEX idx_measurements_order ON measurements(order_id);
+CREATE INDEX idx_transactions_order ON transactions(order_id);
