@@ -1,311 +1,375 @@
 import React, { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Box,
   Typography,
   Card,
   CardContent,
-  CardHeader,
-  Avatar,
-  CircularProgress,
-  Button,
   Grid,
+  CircularProgress,
+  Paper,
   Chip,
-  List,
-  ListItem,
-  ListItemText,
-  Badge,
+  Divider,
   useTheme,
-  useMediaQuery
+  Avatar,
+  Badge
 } from "@mui/material";
-import {
-  ArrowBack,
-  Receipt,
-  Assignment,
-  Image as ImageIcon,
-  Straighten as MeasurementsIcon,
-  LocationOn,
-  CalendarToday,
-  Event,
-  CheckCircle,
-  Pending,
-  AccessTime,
-  Error
-} from "@mui/icons-material";
 import axios from "axios";
-import { styled } from "@mui/material/styles";
+import EventNoteIcon from '@mui/icons-material/EventNote';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import PersonIcon from '@mui/icons-material/Person';
+import PlaceIcon from '@mui/icons-material/Place';
+import ReceiptIcon from '@mui/icons-material/Receipt';
 
-const API_URL = "http://localhost/boutiquetailoringsoftware/public_html/api/orders/getOrdersById.php";
-const IMAGE_BASE_URL = "http://localhost/boutiquetailoringsoftware/public_html/api/orders/uploads/orders/";
+const API_URL = "http://localhost/boutiquetailoringsoftware/public_html/api/orders/getOrders.php";
 
-const StatusChip = styled(Chip)(({ theme }) => ({
-  fontWeight: 600,
-  textTransform: 'uppercase',
-  letterSpacing: 0.5,
-  borderRadius: 4
-}));
+function groupByDate(orders) {
+  const groups = {};
+  orders.forEach((order) => {
+    const date = order.delivery_date || "No Delivery Date";
+    if (!groups[date]) groups[date] = [];
+    groups[date].push(order);
+  });
+  return groups;
+}
 
-const PurchaseDetailsPage = () => {
-  const { order_id } = useParams();
-  const navigate = useNavigate();
-  const [order, setOrder] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [selectedParticular, setSelectedParticular] = useState(null);
+const MasterPurchasesPage = ({ userId }) => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchOrder = async () => {
-      setLoading(true);
-      try {
-        const res = await axios.get(API_URL, { params: { order_id } });
-        setOrder(res.data.order || null);
-        if (res.data.order?.particulars?.length > 0) {
-          setSelectedParticular(res.data.order.particulars[0]);
-        }
-      } catch (err) {
-        console.error("Error fetching order:", err);
-        setOrder(null);
-      }
-      setLoading(false);
-    };
-    fetchOrder();
-  }, [order_id]);
-
-  const getStatusIcon = (status) => {
-    switch (status) {
-      case 'Completed':
-        return <CheckCircle color="success" />;
-      case 'Pending':
-        return <Pending color="warning" />;
-      case 'In Progress':
-        return <AccessTime color="info" />;
-      default:
-        return <Error color="error" />;
-    }
-  };
+    setLoading(true);
+    axios
+      .get(API_URL, {
+        params: {
+          page: 1,
+          limit: 50,
+          assigned_to: userId,
+        },
+      })
+      .then((res) => {
+        setOrders(res.data.orders || []);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, [userId]);
 
   if (loading) {
     return (
-      <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-        <CircularProgress size={60} thickness={4} />
+      <Box sx={{ 
+        minHeight: "60vh", 
+        display: "flex", 
+        alignItems: "center", 
+        justifyContent: "center",
+        background: theme.palette.background.default
+      }}>
+        <CircularProgress thickness={4} size={60} sx={{ color: theme.palette.primary.main }} />
       </Box>
     );
   }
 
-  if (!order) {
-    return (
-      <Box sx={{ p: 4, textAlign: 'center' }}>
-        <Typography variant="h5" color="error" gutterBottom>
-          Order Not Found
-        </Typography>
-        <Button variant="contained" startIcon={<ArrowBack />} onClick={() => navigate(-1)} sx={{ mt: 2 }}>
-          Go Back
-        </Button>
-      </Box>
-    );
-  }
+  const grouped = groupByDate(orders);
+  const sortedDates = Object.keys(grouped).sort((a, b) => new Date(b) - new Date(a));
+
+  const formatDateDisplay = (dateStr) => {
+    if (dateStr === "No Delivery Date") return dateStr;
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+  const getInitials = (name) => {
+    if (!name) return "";
+    return name.split(' ')
+      .map(part => part[0])
+      .join('')
+      .toUpperCase();
+  };
+
+  const getRandomPastelColor = () => {
+    const hue = Math.floor(Math.random() * 360);
+    return `hsl(${hue}, 80%, 85%)`;
+  };
 
   return (
-    <Box sx={{ bgcolor: 'background.default', minHeight: '100vh', p: isMobile ? 1 : 3 }}>
-      {/* Top Header Box */}
-      <Card sx={{ mb: 3 }}>
-        <CardContent>
-          <Grid container alignItems="center" spacing={2}>
-            <Grid item xs={12}>
-              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2, alignItems: 'center' }}>
-                <Typography variant="h6" fontWeight={700}>
-                  <Receipt fontSize="small" sx={{ verticalAlign: 'middle', mr: 1 }} />
-                  Invoice: {order.order.invoice}
-                </Typography>
-                <Typography variant="h6" fontWeight={700}>
-                  Customer: {order.customer.fullName}
-                </Typography>
-                <Typography variant="h6" fontWeight={700}>
-                  <CalendarToday fontSize="small" sx={{ verticalAlign: 'middle', mr: 1 }} />
-                  Taken: {order.dates.takenDate}
-                </Typography>
-                <Typography variant="h6" fontWeight={700}>
-                  <Event fontSize="small" sx={{ verticalAlign: 'middle', mr: 1 }} />
-                  Delivery: {order.dates.deliveryDate}
-                </Typography>
-                <StatusChip
-                  label={order.order.status}
-                  icon={getStatusIcon(order.order.status)}
-                  color={
-                    order.order.status === "Completed"
-                      ? "success"
-                      : order.order.status === "Pending"
-                      ? "warning"
-                      : "info"
-                  }
-                />
-              </Box>
-            </Grid>
-          </Grid>
-        </CardContent>
-      </Card>
-
-      {/* Three Column Layout */}
-      <Grid container spacing={3}>
-        {/* Left Column - 30% */}
-        <Grid item xs={12} md={4}>
-          <Card sx={{ height: '100%' }}>
-            <CardHeader
-              title="Order Particulars"
-              avatar={<Avatar sx={{ bgcolor: 'primary.main' }}><Assignment /></Avatar>}
-            />
-            <CardContent>
-              <List dense>
-                {order.particulars.map((p) => (
-                  <ListItem
-                    key={p.particular_id}
-                    button
-                    selected={selectedParticular?.particular_id === p.particular_id}
-                    onClick={() => setSelectedParticular(p)}
-                    sx={{
-                      mb: 1,
-                      borderRadius: 1,
-                      '&.Mui-selected': {
-                        backgroundColor: 'primary.light',
-                        '&:hover': {
-                          backgroundColor: 'primary.light'
-                        }
-                      }
-                    }}
-                  >
-                    <ListItemText
-                      primary={p.description}
-                      secondary={`₹${p.price}`}
-                      primaryTypographyProps={{ fontWeight: 600 }}
-                    />
-                    <Chip label={p.status} size="small" color={p.status === "Completed" ? "success" : "info"} />
-                    {p.images?.length > 0 && (
-                      <Badge badgeContent={p.images.length} color="secondary" sx={{ ml: 1 }}>
-                        <ImageIcon color="action" fontSize="small" />
-                      </Badge>
-                    )}
-                  </ListItem>
-                ))}
-              </List>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Middle Column - 50% */}
-        <Grid item xs={12} md={6}>
-          <Card sx={{ height: '100%' }}>
-            <CardHeader
-              title="Images"
-              avatar={<Avatar sx={{ bgcolor: 'secondary.main' }}><ImageIcon /></Avatar>}
-              subheader={selectedParticular?.description}
-            />
-            <CardContent>
-              {selectedParticular?.images?.length > 0 ? (
-                <Grid container spacing={2}>
-                  {selectedParticular.images.map((img, i) => {
-                    const imgUrl = img.startsWith("http") ? img : IMAGE_BASE_URL + img;
-                    return (
-                      <Grid item xs={12} key={i}>
-                        <Card variant="outlined">
-                          <Box
-                            component="img"
-                            src={imgUrl}
-                            alt={`Image ${i + 1}`}
-                            sx={{ width: '100%', height: 200, objectFit: 'contain' }}
-                          />
-                        </Card>
-                      </Grid>
-                    );
-                  })}
-                </Grid>
-              ) : (
+    <Box sx={{ 
+      p: { xs: 2, sm: 3 },
+      display: 'flex',
+      justifyContent: 'center',
+      background: theme.palette.background.default,
+      minHeight: '100vh'
+    }}>
+      <Box sx={{
+        width: '100%',
+        maxWidth: 1600,
+        backgroundColor: theme.palette.background.paper,
+        borderRadius: 4,
+        boxShadow: theme.shadows[2],
+        p: { xs: 2, sm: 3, md: 4 },
+        border: `1px solid ${theme.palette.divider}`
+      }}>
+        <Box sx={{ 
+          mb: 4,
+          display: 'flex',
+          flexDirection: { xs: 'column', sm: 'row' },
+          alignItems: { xs: 'flex-start', sm: 'center' },
+          justifyContent: 'space-between'
+        }}>
+          <Box>
+            <Typography 
+              variant="h4" 
+              fontWeight={700}
+              sx={{ 
+                mb: 1,
+                color: theme.palette.text.primary,
+                fontSize: { xs: '1.75rem', md: '2.125rem' },
+                lineHeight: 1.2
+              }}
+            >
+              Order Dashboard
+            </Typography>
+            <Typography variant="body1" color="text.secondary">
+              {orders.length} orders in your queue
+            </Typography>
+          </Box>
+          <Chip 
+            icon={<EventNoteIcon />}
+            label={new Date().toLocaleDateString('en-US', { 
+              weekday: 'long', 
+              month: 'long', 
+              day: 'numeric' 
+            })}
+            sx={{ 
+              mt: { xs: 2, sm: 0 },
+              px: 2,
+              py: 1.5,
+              backgroundColor: theme.palette.action.selected,
+              color: theme.palette.text.primary,
+              fontSize: '0.875rem',
+              '.MuiChip-icon': {
+                color: theme.palette.primary.main
+              }
+            }}
+          />
+        </Box>
+        
+        {sortedDates.length === 0 ? (
+          <Paper elevation={0} sx={{ 
+            p: 4, 
+            textAlign: 'center',
+            borderRadius: 3,
+            background: theme.palette.background.paper,
+            boxShadow: '0 8px 16px rgba(0,0,0,0.04)',
+            border: `1px solid ${theme.palette.divider}`
+          }}>
+            <Typography variant="h6" color="text.secondary">
+              No orders currently assigned to you
+            </Typography>
+          </Paper>
+        ) : (
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+            {sortedDates.map((date) => (
+              <Box key={date}>
                 <Box sx={{
                   display: 'flex',
-                  flexDirection: 'column',
                   alignItems: 'center',
-                  justifyContent: 'center',
-                  height: 200,
-                  bgcolor: 'background.paper',
-                  borderRadius: 1
+                  mb: 3,
+                  p: 2,
+                  position: 'relative',
+                  borderRadius: 2,
+                  backgroundColor: theme.palette.mode === 'dark' 
+                    ? 'rgba(255, 255, 255, 0.05)' 
+                    : 'rgba(0, 0, 0, 0.03)',
+                  boxShadow: theme.shadows[1],
+                  '&:before': {
+                    content: '""',
+                    position: 'absolute',
+                    left: 0,
+                    bottom: 0,
+                    width: '100%',
+                    height: '2px',
+                    background: `linear-gradient(90deg, ${theme.palette.primary.main}, transparent)`,
+                    borderRadius: '0 0 2px 2px'
+                  }
                 }}>
-                  <ImageIcon fontSize="large" color="disabled" />
-                  <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-                    No images available
+
+                  <Typography variant="h6" fontWeight={600} sx={{ 
+                    color: theme.palette.text.primary,
+                    flexGrow: 1
+                  }}>
+                    {formatDateDisplay(date)}
                   </Typography>
+                  <Badge 
+                    badgeContent={grouped[date].length} 
+                    color="primary"
+                    sx={{
+                      '& .MuiBadge-badge': {
+                        right: -10,
+                        top: -10,
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        padding: '0 4px',
+                        height: 20,
+                        minWidth: 20
+                      }
+                    }}
+                  />
                 </Box>
-              )}
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Right Column - 20% */}
-        <Grid item xs={12} md={2}>
-          <Card sx={{ height: '100%' }}>
-            <CardHeader
-              title="Measurements"
-              avatar={<Avatar sx={{ bgcolor: 'info.main' }}><MeasurementsIcon /></Avatar>}
-            />
-            <CardContent>
-              {order.measurements ? (
-                <>
-                  <Typography variant="subtitle1" gutterBottom sx={{ fontWeight: 600 }}>
-                    Standard
-                  </Typography>
-                  <Grid container spacing={1} sx={{ mb: 2 }}>
-                    {Object.entries(order.measurements).map(([key, value]) => {
-                      if (key === 'SL' || key === 'others') return null;
-                      return (
-                        <Grid item xs={12} key={key}>
-                          <Card variant="outlined" sx={{ p: 1 }}>
-                            <Typography variant="subtitle2" color="text.secondary">
-                              {key.replace(/_/g, ' ')}
+                
+                <Grid container spacing={3}>
+                  {grouped[date].map((order) => (
+                    <Grid item xs={12} sm={6} lg={4} key={order.order_id}>
+                      <Card 
+                        sx={{ 
+                          height: '100%',
+                          display: 'flex',
+                          flexDirection: 'column',
+                          transition: '0.3s',
+                          borderRadius: 3,
+                          border: `1px solid ${theme.palette.divider}`,
+                          background: theme.palette.background.paper,
+                          boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                          '&:hover': {
+                            transform: 'translateY(-4px)',
+                            boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+                            cursor: 'pointer',
+                            borderColor: theme.palette.primary.light
+                          }
+                        }}
+                        onClick={() => navigate(`/purchase/${order.order_id}`)}
+                      >
+                        <CardContent sx={{ 
+                          flexGrow: 1,
+                          p: 3,
+                          '&:last-child': { pb: 3 }
+                        }}>
+                          <Box sx={{ 
+                            display: 'flex',
+                            alignItems: 'center',
+                            mb: 2,
+                            gap: 2
+                          }}>
+                            
+                            <Box sx={{ minWidth: 0 }}>
+                              <Typography 
+                                variant="subtitle1" 
+                                fontWeight={600}
+                                sx={{ 
+                                  whiteSpace: 'nowrap',
+                                  overflow: 'hidden',
+                                  textOverflow: 'ellipsis',
+                                  lineHeight: 1.3
+                                }}
+                              >
+                                {order.customer.fullName}
+                              </Typography>
+                              <Box sx={{ 
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 1,
+                                mt: 0.5
+                              }}>
+                                <ReceiptIcon fontSize="small" color="action" sx={{ fontSize: '1rem' }} />
+                                <Typography 
+                                  variant="body2" 
+                                  color="text.secondary"
+                                  sx={{
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    fontSize: '0.8rem'
+                                  }}
+                                >
+                                  {order.invoice}
+                                </Typography>
+                              </Box>
+                            </Box>
+                          </Box>
+                          
+                          <Divider sx={{ 
+                            my: 2,
+                            borderColor: theme.palette.divider,
+                            opacity: 0.5
+                          }} />
+                          
+                          <Box sx={{ 
+                            display: 'flex',
+                            alignItems: 'flex-start',
+                            gap: 1.5,
+                            mb: 2
+                          }}>
+                            <PlaceIcon fontSize="small" color="action" sx={{ mt: 0.5 }} />
+                            <Typography 
+                              variant="body2" 
+                              color="text.secondary"
+                              sx={{ 
+                                display: '-webkit-box',
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: 'vertical',
+                                overflow: 'hidden',
+                                textOverflow: 'ellipsis',
+                                lineHeight: 1.5,
+                                fontSize: '0.875rem'
+                              }}
+                            >
+                              {order.customer.address}
                             </Typography>
-                            <Typography variant="h6" fontWeight={600}>{value}</Typography>
-                          </Card>
-                        </Grid>
-                      );
-                    })}
-                  </Grid>
-
-                  {order.measurements.SL && (
-                    <>
-                      <Typography variant="subtitle1" fontWeight={600}>Sleeve</Typography>
-                      {Object.entries(order.measurements.SL).map(([position, m], i) => (
-                        <Card key={i} variant="outlined" sx={{ p: 1, mb: 1 }}>
-                          <Typography variant="subtitle2">{position}</Typography>
-                          <Chip label={`L: ${m.L}`} size="small" sx={{ mr: 0.5 }} />
-                          <Chip label={`W: ${m.W}`} size="small" sx={{ mr: 0.5 }} />
-                          <Chip label={`A: ${m.A}`} size="small" />
-                        </Card>
-                      ))}
-                    </>
-                  )}
-
-                  {order.measurements.others?.length > 0 && (
-                    <>
-                      <Typography variant="subtitle1" fontWeight={600}>Custom</Typography>
-                      <List dense>
-                        {order.measurements.others.map((item, index) => (
-                          <ListItem key={index}>
-                            <ListItemText primary={item.name} secondary={item.value} />
-                          </ListItem>
-                        ))}
-                      </List>
-                    </>
-                  )}
-                </>
-              ) : (
-                <Typography variant="body2" color="text.secondary">
-                  No measurements recorded.
-                </Typography>
-              )}
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+                          </Box>
+                          
+                          <Box sx={{ 
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            mt: 3,
+                            pt: 1.5,
+                            borderTop: `1px dashed ${theme.palette.divider}`
+                          }}>
+                            <Box sx={{ 
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: 1
+                            }}>
+                              <PersonIcon fontSize="small" color="action" />
+                              <Typography 
+                                variant="caption" 
+                                color="text.disabled"
+                                sx={{ fontSize: '0.75rem' }}
+                              >
+                                Taken: {new Date(order.taken_date).toLocaleDateString()}
+                              </Typography>
+                            </Box>
+                            <Chip 
+                              label="View Details"
+                              size="small"
+                              sx={{
+                                backgroundColor: theme.palette.action.hover,
+                                color: theme.palette.text.secondary,
+                                fontSize: '0.7rem',
+                                height: 24,
+                                '&:hover': {
+                                  backgroundColor: theme.palette.action.selected
+                                }
+                              }}
+                            />
+                          </Box>
+                        </CardContent>
+                      </Card>
+                    </Grid>
+                  ))}
+                </Grid>
+              </Box>
+            ))}
+          </Box>
+        )}
+      </Box>
     </Box>
   );
 };
 
-export default PurchaseDetailsPage;
+export default MasterPurchasesPage;

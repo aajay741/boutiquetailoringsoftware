@@ -25,10 +25,10 @@ function PurchaseDashboard() {
       action: () => navigate('/add-purchase')
     },
     {
-      title: 'View Purchases',
-      description: 'Browse existing purchases',
+      title: 'Pending Orders',
+      description: 'Browse Pending Orders',
       icon: <ListAltIcon fontSize="large" />,
-      action: () => navigate('/view-purchases')
+      action: () => navigate('/view-pending-purchases')
     },
     {
       title: 'Purchase Reports',

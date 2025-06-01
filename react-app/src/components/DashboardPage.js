@@ -41,10 +41,22 @@ function DashboardPage({ role, userId }) {
       path: '/add-purchase'
     },
     {
-      title: 'View Purchases',
-      description: 'Browse existing purchases',
+      title: 'Pending Orders',
+      description: 'Browse Pending Orders',
       icon: <ListAltIcon fontSize="large" color="primary" />,
-      path: '/view-purchases'
+      path: '/view-pending-purchases'
+    },
+     {
+      title: 'Delivered Orders',
+      description: 'Browse Delivered Orders',
+      icon: <ListAltIcon fontSize="large" color="primary" />,
+      path: '/view-delivered-purchases'
+    },
+    {
+      title: 'Billing',
+      description: 'Manage customer billing ',
+      icon: <PaymentIcon fontSize="large" color="primary" />,
+      path: '/billing'
     },
     {
       title: 'Master Purchases',
@@ -52,6 +64,7 @@ function DashboardPage({ role, userId }) {
       icon: <CollectionsBookmarkIcon fontSize="large" color="primary" />,
       path: '/master-purchases'
     },
+    
     {
       title: 'Add Master',
       description: 'Add master data for tailoring',
@@ -64,23 +77,12 @@ function DashboardPage({ role, userId }) {
       icon: <StoreIcon fontSize="large" color="primary" />,
       path: '/add-store'
     },
-    {
-      title: 'Billing',
-      description: 'Manage customer billing ',
-      icon: <PaymentIcon fontSize="large" color="primary" />,
-      path: '/billing'
-    },
+    
     {
       title: 'Reports',
       description: 'View and generate reports',
       icon: <AssessmentIcon fontSize="large" color="primary" />,
       path: '/report'
-    },
-    {
-      title: 'Monthly Report',
-      description: 'View monthly reports',
-      icon: <DateRangeIcon fontSize="large" color="primary" />,
-      path: '/monthly-report'
     }
   ];
 
@@ -135,24 +137,17 @@ function DashboardPage({ role, userId }) {
             >
               Admin Dashboard
             </Typography>
-            <Typography
-              variant="subtitle1"
-              sx={{
-                color: 'text.secondary'
-              }}
-            >
-              Sarrahh Boutique & Tailors - Administrator View
-            </Typography>
+          
           </Box>
 
           {/* Cards Grid - 4 cards per row */}
-          <Grid container spacing={3} justifyContent="center">
+          <Grid container spacing={3} justifyContent="center" alignItems="stretch">
             {cards.map((card, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
+              <Grid item xs={12} sm={6} md={3} key={index} sx={{ display: 'flex' }}>
                 <Card
                   sx={{
                     height: 240, // Fixed height
-                    width: '100%', // Full width of grid item
+                    width: '100%',
                     display: 'flex',
                     flexDirection: 'column',
                     borderRadius: 2,
@@ -161,7 +156,8 @@ function DashboardPage({ role, userId }) {
                     '&:hover': {
                       transform: 'translateY(-4px)',
                       boxShadow: 4
-                    }
+                    },
+                    overflow: 'hidden' // Prevent overflow
                   }}
                 >
                   <CardActionArea
@@ -172,23 +168,24 @@ function DashboardPage({ role, userId }) {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      justifyContent: 'space-between' // Distribute space evenly
+                      justifyContent: 'space-between'
                     }}
                   >
                     <Box sx={{ 
                       mb: 2,
-                      flexShrink: 0 // Prevent icon from growing
+                      flexShrink: 0
                     }}>
                       {card.icon}
                     </Box>
-                    <CardContent sx={{ 
+                    <CardContent sx={{
                       textAlign: 'center',
-                      flexGrow: 1, // Allow content to take available space
+                      flexGrow: 1,
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'center',
                       width: '100%',
-                      px: 0 // Remove horizontal padding
+                      px: 0,
+                      overflow: 'hidden'
                     }}>
                       <Typography
                         variant="h6"
@@ -199,7 +196,7 @@ function DashboardPage({ role, userId }) {
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
                           display: '-webkit-box',
-                          WebkitLineClamp: 2, // Limit to 2 lines
+                          WebkitLineClamp: 1, // Limit to 1 line
                           WebkitBoxOrient: 'vertical'
                         }}
                       >

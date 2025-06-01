@@ -10,3 +10,27 @@
 [01-Jun-2025 06:07:09 Europe/Berlin] Login successful for user: admin@example.com
 [01-Jun-2025 06:07:09 Europe/Berlin] ======== LOGIN REQUEST END ========
 
+[01-Jun-2025 19:04:06 Europe/Berlin] ======== LOGIN REQUEST START ========
+[01-Jun-2025 19:04:06 Europe/Berlin] DB connection file included
+[01-Jun-2025 19:04:06 Europe/Berlin] Received login request for email: admin@example.com
+[01-Jun-2025 19:04:06 Europe/Berlin] Login successful for user: admin@example.com
+[01-Jun-2025 19:04:06 Europe/Berlin] ======== LOGIN REQUEST END ========
+
+[02-Jun-2025 00:12:34 Europe/Berlin] ======== LOGIN REQUEST START ========
+[02-Jun-2025 00:12:34 Europe/Berlin] DB connection file included
+[02-Jun-2025 00:12:34 Europe/Berlin] Received login request for email: ajayselvaas6@gmail.com
+[02-Jun-2025 00:12:34 Europe/Berlin] Login successful for user: ajayselvaas6@gmail.com
+[02-Jun-2025 00:12:34 Europe/Berlin] ======== LOGIN REQUEST END ========
+
+[02-Jun-2025 00:18:43 Europe/Berlin] ======== LOGIN REQUEST START ========
+[02-Jun-2025 00:18:43 Europe/Berlin] DB connection file included
+[02-Jun-2025 00:18:43 Europe/Berlin] Received login request for email: admin@example.com
+[02-Jun-2025 00:18:43 Europe/Berlin] Login successful for user: admin@example.com
+[02-Jun-2025 00:18:43 Europe/Berlin] ======== LOGIN REQUEST END ========
+
+[02-Jun-2025 00:57:08 Europe/Berlin] ======== LOGIN REQUEST START ========
+[02-Jun-2025 00:57:08 Europe/Berlin] DB connection file included
+[02-Jun-2025 00:57:08 Europe/Berlin] Received login request for email: test@gmail.com
+[02-Jun-2025 00:57:08 Europe/Berlin] Login successful for user: test@gmail.com
+[02-Jun-2025 00:57:08 Europe/Berlin] ======== LOGIN REQUEST END ========
+

@@ -9548,3 +9548,2319 @@ Response sent successfully.
 DB connection closed.
 Request completed
 
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 17:33:02
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 17:33:02
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 17:33:06
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 17:33:07
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 18:38:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 18:38:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 18:40:09
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 18:40:09
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:04:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:04:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:33:16
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:33:16
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:33:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:33:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:48:39
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 19:48:39
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 20:17:10
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 20:17:10
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 20:39:29
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 20:39:29
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:11:37
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:11:37
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:09
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:09
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:23
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:23
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:18:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:24:12
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:24:12
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:00
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:00
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:24
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:24
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:29
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:29
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 21:34:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:15:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:15:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:46:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:46:54
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:50:39
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:50:39
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:51:17
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 22:51:17
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:08:44
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:08:44
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:08:49
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:08:49
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:39:28
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:39:28
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:40:05
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:40:05
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:41:50
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:41:50
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:41:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:41:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:02
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:02
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:37
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:44:37
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:48:15
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:48:44
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:48:44
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:49:13
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:49:13
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:50:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:50:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:50:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:50:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:51:36
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:51:36
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:52:46
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:52:46
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:53:28
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:53:28
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:53:45
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:53:46
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:55:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:55:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:55:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:55:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:58:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:58:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:58:43
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-01 23:58:43
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:27
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:27
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:41
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:41
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:50
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:00:50
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:01:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:01:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:32
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:43
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:43
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:51
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:02:51
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:06:13
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:06:13
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:06:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:06:30
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:40
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:07:40
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:08:03
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:08:03
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:08:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:08:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:09:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:09:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:10:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:10:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:12:00
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:12:00
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:12:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:12:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:18:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:18:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:24:20
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:24:20
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:30:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:30:11
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:02
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:03
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:27
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:27
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:41
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:41
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:58
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:31:58
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:32:16
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:32:16
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:33:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:33:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:33:52
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:33:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:37:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:37:21
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:37:36
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:37:36
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:44:38
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:44:38
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:44:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:44:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:45:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:45:22
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:46:25
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:46:25
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:49:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:49:53
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:51:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:51:59
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:17
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:17
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:45
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:45
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:55:47
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:18
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:25
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:25
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:31
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:31
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:33
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:33
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:35
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:35
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:42
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 00:56:42
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:04:04
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:04:04
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:05:03
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:05:03
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:06:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+
+====== NEW GET STORES REQUEST ======
+Time: 2025-06-02 01:06:14
+Attempting DB connection...
+Attempting DB connection
+DB connected successfully
+DB connection successful.
+Executing query: SELECT * FROM stores ORDER BY store_name ASC
+Stores fetched: 1
+Response sent successfully.
+DB connection closed.
+Request completed
+

@@ -1,2 +1,93 @@
 addCustomer.php -  AddPurchasePage.js to add purchases
-getOrders.php - ViewPurchasesPage.js - view all orders dashboard 
+getOrders.php - ViewPendingOrders.js - view all orders dashboard 
+
+
+{
+    "order": {
+        "order_id": 12,
+        "invoice": "SBK_0012",
+        "advance": "0.00",
+        "total_amount": "0.00",
+        "balance_amount": "0.00",
+        "taken_by": 4,
+        "assigned_to": 1,
+        "taken_date": "2025-05-31",
+        "delivery_date": "2025-06-01",
+        "special_note": "Test A",
+        "status": "pending",
+        "store_id": 10
+    },
+    "customer": {
+        "fullName": "Nandhini M",
+        "phone": "6380338626",
+        "whatsapp": "6380338626",
+        "address": "Test data",
+        "storeId": 10
+    },
+    "particulars": [
+        {
+            "particular_id": 20,
+            "description": "Test A",
+            "price": "0.00",
+            "status": "pending",
+            "images": [
+                "12/particulars/20/683b459eb45ff.png",
+                "12/particulars/20/683b459eb48a7.png"
+            ]
+        }
+    ],
+    "measurements": {
+        "L": "1",
+        "SH": "7",
+        "ARM": "2",
+        "UB": "3",
+        "MB": "4",
+        "W": "8",
+        "POINT": "9",
+        "FN": "5",
+        "BN": "10",
+        "HIP": "6",
+        "SEAT": "11",
+        "THIGH": "12",
+        "SL": [
+            {
+                "L": "1",
+                "W": "2",
+                "A": "1"
+            },
+            {
+                "L": "4",
+                "W": "5",
+                "A": "6"
+            }
+        ],
+        "others": [
+            {
+                "name": "test ",
+                "value": "1"
+            }
+        ]
+    },
+    "dates": {
+        "takenDate": "2025-05-31",
+        "deliveryDate": "2025-06-01"
+    },
+    "orderTakenBy": {
+        "masterId": 4,
+        "name": "testajay"
+    },
+    "assignedTo": {
+        "masterId": 1,
+        "name": "adminuser"
+    },
+    "specialNote": "Test A",
+    "advance": "0.00",
+    "total": "0.00",
+    "balance": "0.00",
+    "status": "pending",
+    "store": {
+        "store_id": 10,
+        "store_name": "Sarrahh boutique and tailors",
+        "store_code": "SBK"
+    }
+}

@@ -64,6 +64,22 @@ try {
         $params[] = "%" . $_GET['invoice'] . "%";
         $types .= 's';
     }
+    if (!empty($_GET['assigned_to'])) {
+        $where[] = "o.assigned_to = ?";
+        $params[] = intval($_GET['assigned_to']);
+        $types .= 'i';
+    }
+    if (!empty($_GET['status'])) {
+        $where[] = "o.status = ?";
+        $params[] = $_GET['status'];
+        $types .= 's';
+    }
+
+    if (isset($_GET['pendingstatus'])) {
+        $where[] = "o.status != ?";
+        $params[] = "delivered";
+        $types .= 's';
+    }
 
     $whereSql = '';
     if (count($where) > 0) {
@@ -82,7 +98,7 @@ try {
     $countStmt->close();
 
     // Fetch paginated data
-    $sql = "SELECT o.order_id, o.invoice, o.taken_date, o.delivery_date, o.status, o.total_amount, o.advance, o.balance_amount, 
+    $sql = "SELECT o.order_id,o.assigned_to, o.invoice, o.taken_date, o.delivery_date, o.status, o.total_amount, o.advance, o.balance_amount, 
                    c.full_name AS customer_name, c.phone, c.address,s.store_name AS storename, u.username AS master_name
             FROM orders o
             LEFT JOIN customers c ON o.customer_id = c.customer_id
@@ -120,7 +136,9 @@ try {
             'advance' => $row['advance'],
             'balance_amount' => $row['balance_amount'],
             'store_name' => [$row['storename']],
-            'master_name' => $row['master_name']
+            'master_name' => $row['master_name'],
+             'assigned_to' => $row['assigned_to']
+
         ];
     }
     $stmt->close();

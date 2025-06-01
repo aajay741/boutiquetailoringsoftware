@@ -34,9 +34,15 @@ import BillingPage from './BillingPage';
 import ReportPage from './ReportPage';
 import AddStorePage from './AddStorePage';
 import PurchaseDashboard from './PurchaseDashboard';
-import ViewPurchasesPage from './ViewPurchasesPage';
+
+
 import MasterPurchasesPage from './MasterPurchasesPage';
 import PurchaseDetailsPage from './PurchaseDetailsPage';
+
+
+
+import ViewPendingOrders from './ViewPendingOrders';
+import ViewDeliveredOrders from './ViewDeliveredOrders';
 
 
 import Slogo from '../images/Slogo.png';
@@ -327,10 +333,11 @@ export default function AdminContent() {
           <Route path="/report" element={<ReportPage />} />
           <Route path="/add-store" element={<AddStorePage />} />
           <Route path="/add-purchase" element={<AddPurchasePage />} />
-          <Route path="/view-purchases" element={<ViewPurchasesPage />} />
+          <Route path="/view-pending-purchases" element={<ViewPendingOrders />} />
+          <Route path="/view-delivered-purchases" element={<ViewDeliveredOrders />} />
           <Route path="/master-purchases" element={<MasterPurchasesPage userId={userId} />} />
           <Route path="/purchases" element={<PurchaseDashboard />} />
-          <Route path="/purchase/:order_id" element={<PurchaseDetailsPage />} />
+          <Route path="/purchase/:order_id" element={<PurchaseDetailsPage role={role} userId={userId} />} />
 
         </Routes>
       </Box>
