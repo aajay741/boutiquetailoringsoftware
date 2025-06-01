@@ -36,6 +36,8 @@ import AddStorePage from './AddStorePage';
 import PurchaseDashboard from './PurchaseDashboard';
 import ViewPurchasesPage from './ViewPurchasesPage';
 import MasterPurchasesPage from './MasterPurchasesPage';
+import PurchaseDetailsPage from './PurchaseDetailsPage';
+
 
 import Slogo from '../images/Slogo.png';
 
@@ -328,6 +330,8 @@ export default function AdminContent() {
           <Route path="/view-purchases" element={<ViewPurchasesPage />} />
           <Route path="/master-purchases" element={<MasterPurchasesPage userId={userId} />} />
           <Route path="/purchases" element={<PurchaseDashboard />} />
+          <Route path="/purchase/:order_id" element={<PurchaseDetailsPage />} />
+
         </Routes>
       </Box>
 

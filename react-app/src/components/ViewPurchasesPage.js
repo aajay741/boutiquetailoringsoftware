@@ -1,518 +1,438 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import {
-  Box,
-  Typography,
-  TextField,
-  Button,
-  Select,
-  MenuItem,
-  Paper,
-  Grid,
-  Card,
-  CardContent,
-  CardHeader,
-  Avatar,
-  Divider,
-  Chip,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  ImageList,
-  ImageListItem,
-  CircularProgress,
-  Alert,
-  IconButton,
-  Collapse
-} from '@mui/material';
-import {
-  Search as SearchIcon,
-  ExpandMore as ExpandMoreIcon,
-  Person as PersonIcon,
-  ShoppingBag as OrderIcon,
-  Receipt as TransactionIcon,
-  Timeline as StatusIcon,
-  Straighten as MeasurementIcon,
-  Photo as PhotoIcon,
-  Close as CloseIcon
-} from '@mui/icons-material';
+  Table, TableBody, TableCell, TableContainer, TableHead, TableRow,
+  Paper, TextField, Button, CircularProgress, Typography, Box, useMediaQuery, MenuItem, Stack, Container, Grid,
+  Card, CardContent, InputAdornment, Pagination, Chip, Avatar
+} from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import SearchIcon from "@mui/icons-material/Search";
+import ClearIcon from "@mui/icons-material/Clear";
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import PersonIcon from '@mui/icons-material/Person';
+import StoreIcon from '@mui/icons-material/Store';
+import PhoneIcon from '@mui/icons-material/Phone';
+import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
+import GroupsIcon from '@mui/icons-material/Groups';
+import { useNavigate } from "react-router-dom";
 
-const CustomerView = () => {
-  const [searchType, setSearchType] = useState('phone');
-  const [searchValue, setSearchValue] = useState('');
-  const [customerData, setCustomerData] = useState(null);
+const API_URL = "http://localhost/boutiquetailoringsoftware/public_html/api/orders/getOrders.php";
+
+const ViewPurchasesPage = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const navigate = useNavigate();
+
+  const [customerName, setCustomerName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [takenDate, setTakenDate] = useState("");
+  const [deliveryDate, setDeliveryDate] = useState("");
+  const [store, setStore] = useState("");
+  const [stores, setStores] = useState([]);
+  const [invoice, setInvoice] = useState("");
+  const [orders, setOrders] = useState([]);
+  const [page, setPage] = useState(1);
+  const [limit] = useState(10);
+  const [totalPages, setTotalPages] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
-  const [openError, setOpenError] = useState(false);
 
-  const fetchCustomerData = async () => {
-    if (!searchValue) {
-      setError('Please enter a search value');
-      setOpenError(true);
-      return;
-    }
-
-    setLoading(true);
-    setError('');
-    setOpenError(false);
-    try {
-      const response = await axios.get(`http://localhost/login/public_html/api/orders/getCustomerData.php?${searchType}=${searchValue}`);
-      if (response.data.success) {
-        setCustomerData(response.data);
-      } else {
-        setError(response.data.message || 'Customer not found');
-        setOpenError(true);
+  useEffect(() => {
+    const fetchStores = async () => {
+      try {
+        const res = await axios.get('http://localhost/boutiquetailoringsoftware/public_html/api/stores/getStores.php');
+        setStores([
+          { id: "", name: "All Stores" },
+          ...(res.data.stores || []).map(store => ({
+            id: store.store_id,
+            name: store.store_name
+          }))
+        ]);
+      } catch (err) {
+        setStores([{ id: "", name: "All Stores" }]);
       }
+    };
+    fetchStores();
+  }, []);
+
+  const fetchOrders = async () => {
+    setLoading(true);
+    try {
+      const params = {
+        page,
+        limit,
+        customer_name: customerName,
+        phone,
+        taken_date: takenDate,
+        delivery_date: deliveryDate,
+        store,
+        invoice
+      };
+      const res = await axios.get(API_URL, { params });
+      setOrders(res.data.orders || []);
+      setTotalPages(res.data.pagination?.pages || 1);
     } catch (err) {
-      setError(err.response?.data?.message || 'Failed to fetch customer data');
-      setOpenError(true);
-    } finally {
-      setLoading(false);
+      setOrders([]);
+      setTotalPages(1);
     }
+    setLoading(false);
   };
 
-  const formatDate = (dateString) => {
-    if (!dateString) return 'N/A';
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-IN', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric'
-    });
+  useEffect(() => {
+    fetchOrders();
+  }, [page]);
+
+  const handleSearch = () => {
+    setPage(1);
+    fetchOrders();
   };
 
-  const formatDateTime = (dateString) => {
-    if (!dateString) return 'N/A';
-    const date = new Date(dateString);
-    return date.toLocaleString('en-IN', {
-      day: 'numeric',
-      month: 'short',
-      year: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
+  const handleClear = () => {
+    setCustomerName("");
+    setPhone("");
+    setTakenDate("");
+    setDeliveryDate("");
+    setStore("");
+    setInvoice("");
+    setPage(1);
+    fetchOrders();
   };
 
-  const formatCurrency = (amount) => {
-    return new Intl.NumberFormat('en-IN', {
-      style: 'currency',
-      currency: 'INR'
-    }).format(amount);
-  };
-
-  const getStatusColor = (status) => {
-    switch (status) {
-      case 'pending':
-        return 'warning';
-      case 'in_progress':
-        return 'info';
-      case 'completed':
-        return 'success';
-      default:
-        return 'default';
+  const columns = [
+    { 
+      label: "Invoice", 
+      key: "invoice",
+      width: "12%"
+    },
+    { 
+      label: "Customer", 
+      key: "customer",
+      width: "20%"
+    },
+    { 
+      label: "Phone", 
+      key: "phone",
+      width: "12%"
+    },
+    { 
+      label: "Store", 
+      key: "store",
+      width: "15%"
+    },
+    { 
+      label: "Tailor", 
+      key: "assigned_to",
+      width: "15%"
+    },
+    { 
+      label: "Taken", 
+      key: "taken_date",
+      width: "13%"
+    },
+    { 
+      label: "Delivery", 
+      key: "delivery_date",
+      width: "13%"
     }
-  };
+  ];
 
-  const formatStatusText = (status) => {
-    return status.replace('_', ' ');
-  };
+  const visibleColumns = isMobile
+    ? columns.filter(col => ["invoice", "customer", "phone", "store"].includes(col.key))
+    : columns;
 
   return (
-    <Box sx={{ p: 3, maxWidth: 1200, margin: '0 auto' }}>
-      <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: 'bold' }}>
-        Customer Details
-      </Typography>
+    <Container maxWidth="xl" sx={{ py: 3 }}>
+      {/* Header */}
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h5" fontWeight={600} gutterBottom>
+          Purchase Orders
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          View and manage all customer orders
+        </Typography>
+      </Box>
 
-      {/* Search Section */}
-      <Paper sx={{ p: 2, mb: 3 }}>
-        <Grid container spacing={2} alignItems="center">
-          <Grid item xs={12} sm={3}>
-            <Select
-              fullWidth
-              value={searchType}
-              onChange={(e) => setSearchType(e.target.value)}
-              size="small"
-            >
-              <MenuItem value="phone">Phone Number</MenuItem>
-              <MenuItem value="customer_id">Customer ID</MenuItem>
-            </Select>
+      {/* Filters */}
+      <Card variant="outlined" sx={{ mb: 3, borderRadius: 2 }}>
+        <CardContent>
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                label="Customer"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={customerName}
+                onChange={e => setCustomerName(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                label="Phone"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={phone}
+                onChange={e => setPhone(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PhoneIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                label="Invoice"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={invoice}
+                onChange={e => setInvoice(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <ReceiptIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                select
+                label="Store"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={store}
+                onChange={e => setStore(e.target.value)}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <StoreIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              >
+                {stores.map((s) => (
+                  <MenuItem key={s.id} value={s.id}>
+                    {s.name}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                label="Taken Date"
+                type="date"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={takenDate}
+                onChange={e => setTakenDate(e.target.value)}
+                InputLabelProps={{ shrink: true }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <CalendarTodayIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6} md={4} lg={3}>
+              <TextField
+                label="Delivery Date"
+                type="date"
+                variant="outlined"
+                size="small"
+                fullWidth
+                value={deliveryDate}
+                onChange={e => setDeliveryDate(e.target.value)}
+                InputLabelProps={{ shrink: true }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <CalendarTodayIcon fontSize="small" color="action" />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+            </Grid>
+            <Grid item xs={12} sx={{ display: 'flex', justifyContent: 'flex-end', gap: 2 }}>
+              <Button
+                variant="outlined"
+                onClick={handleClear}
+                startIcon={<ClearIcon />}
+                sx={{ minWidth: 120 }}
+              >
+                Clear
+              </Button>
+              <Button
+                variant="contained"
+                onClick={handleSearch}
+                startIcon={<SearchIcon />}
+                sx={{ minWidth: 120 }}
+              >
+                Search
+              </Button>
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <TextField
-              fullWidth
-              type={searchType === 'phone' ? 'tel' : 'number'}
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.target.value)}
-              placeholder={searchType === 'phone' ? 'Enter phone number' : 'Enter customer ID'}
-              size="small"
-            />
-          </Grid>
-          <Grid item xs={12} sm={3}>
-            <Button
-              fullWidth
-              variant="contained"
-              color="primary"
-              onClick={fetchCustomerData}
-              disabled={loading}
-              startIcon={loading ? <CircularProgress size={20} color="inherit" /> : <SearchIcon />}
-            >
-              Search
-            </Button>
-          </Grid>
-        </Grid>
-      </Paper>
+        </CardContent>
+      </Card>
 
-      {/* Error Alert */}
-      <Collapse in={openError}>
-        <Alert
-          severity="error"
-          action={
-            <IconButton
-              aria-label="close"
-              color="inherit"
-              size="small"
-              onClick={() => {
-                setOpenError(false);
-              }}
-            >
-              <CloseIcon fontSize="inherit" />
-            </IconButton>
-          }
-          sx={{ mb: 3 }}
-        >
-          {error}
-        </Alert>
-      </Collapse>
-
-      {customerData && (
-        <Box>
-          {/* Customer Info Section */}
-          <Card sx={{ mb: 3 }}>
-            <CardHeader
-              avatar={
-                <Avatar sx={{ bgcolor: 'primary.main' }}>
-                  <PersonIcon />
-                </Avatar>
-              }
-              title={<Typography variant="h6">Customer Information</Typography>}
-            />
-            <CardContent>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={6} md={4}>
-                  <Typography variant="body1">
-                    <strong>Name:</strong> {customerData.customer.full_name}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <Typography variant="body1">
-                    <strong>Phone:</strong> {customerData.customer.phone}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <Typography variant="body1">
-                    <strong>WhatsApp:</strong> {customerData.customer.whatsapp || 'N/A'}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <Typography variant="body1">
-                    <strong>Address:</strong> {customerData.customer.address || 'N/A'}
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sm={6} md={4}>
-                  <Typography variant="body1">
-                    <strong>Store:</strong> {customerData.customer.store_name || 'N/A'}
-                  </Typography>
-                </Grid>
-              </Grid>
-            </CardContent>
-          </Card>
-
-          {/* Orders Section */}
-          <Typography variant="h5" gutterBottom sx={{ mt: 4, mb: 2 }}>
-            Order History ({customerData.orders.length})
-          </Typography>
-
-          {customerData.orders.map((order) => (
-            <Accordion key={order.order_id} sx={{ mb: 3 }}>
-              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                  <OrderIcon color="action" sx={{ mr: 2 }} />
-                  <Typography sx={{ flex: 1 }}>Order #{order.order_id}</Typography>
-                  <Chip
-                    label={formatStatusText(order.status)}
-                    color={getStatusColor(order.status)}
-                    size="small"
-                    sx={{ ml: 2 }}
-                  />
-                </Box>
-              </AccordionSummary>
-              <AccordionDetails>
-                {/* Order Basic Info */}
-                <Grid container spacing={2} sx={{ mb: 3 }}>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Taken Date:</strong> {formatDate(order.taken_date)}
+      {/* Results */}
+      <Card variant="outlined" sx={{ borderRadius: 2 }}>
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow sx={{ backgroundColor: theme.palette.grey[50] }}>
+                {visibleColumns.map((col) => (
+                  <TableCell
+                    key={col.key}
+                    sx={{
+                      fontWeight: 600,
+                      fontSize: '0.875rem',
+                      width: col.width
+                    }}
+                  >
+                    {col.label}
+                  </TableCell>
+                ))}
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {loading ? (
+                <TableRow>
+                  <TableCell colSpan={visibleColumns.length} align="center" sx={{ py: 4 }}>
+                    <CircularProgress size={24} />
+                  </TableCell>
+                </TableRow>
+              ) : orders.length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={visibleColumns.length} align="center" sx={{ py: 4 }}>
+                    <Typography variant="body2" color="text.secondary">
+                      No orders found matching your criteria
                     </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Delivery Date:</strong> {formatDate(order.delivery_date)}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Taken By:</strong> {order.taken_by_name}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Assigned To:</strong> {order.assigned_to_name}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Total:</strong> {formatCurrency(order.total_amount)}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Advance:</strong> {formatCurrency(order.advance)}
-                    </Typography>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Typography variant="body2">
-                      <strong>Balance:</strong> {formatCurrency(order.balance_amount)}
-                    </Typography>
-                  </Grid>
-                </Grid>
-
-                {order.special_note && (
-                  <Alert severity="info" sx={{ mb: 3 }}>
-                    <strong>Special Note:</strong> {order.special_note}
-                  </Alert>
-                )}
-
-                {/* Order Particulars */}
-                <Accordion sx={{ mb: 2 }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <Typography>Items ({order.particulars.length})</Typography>
-                    </Box>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <List dense>
-                      {order.particulars.map((item) => (
-                        <Accordion key={item.particular_id} sx={{ mb: 1 }}>
-                          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                            <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-                              <Typography sx={{ flex: 1 }}>{item.description}</Typography>
-                              <Typography sx={{ mr: 2 }}>{formatCurrency(item.price)}</Typography>
-                              <Chip
-                                label={formatStatusText(item.status)}
-                                color={getStatusColor(item.status)}
-                                size="small"
-                              />
+                  </TableCell>
+                </TableRow>
+              ) : (
+                orders.map((order) => (
+                  <TableRow
+                    key={order.order_id}
+                    hover
+                    sx={{ '&:last-child td': { borderBottom: 0 } }}
+                  >
+                    {visibleColumns.map((col) => {
+                      if (col.key === "invoice") {
+                        return (
+                          <TableCell key={col.key}>
+                            <Typography
+                              onClick={() => navigate(`/purchase/${order.order_id}`)}
+                              sx={{
+                                color: theme.palette.primary.main,
+                                fontWeight: 500,
+                                cursor: 'pointer',
+                                '&:hover': { textDecoration: 'underline' }
+                              }}
+                            >
+                              {order[col.key]}
+                            </Typography>
+                          </TableCell>
+                        );
+                      }
+                      if (col.key === "customer") {
+                        return (
+                          <TableCell key={col.key}>
+                            <Box display="flex" alignItems="center" gap={1}>
+                              <Avatar sx={{ width: 32, height: 32, fontSize: 14 }}>
+                                {order.customer?.fullName?.charAt(0) || 'C'}
+                              </Avatar>
+                              <Typography variant="body2">
+                                {order.customer?.fullName || order.customer_name || "N/A"}
+                              </Typography>
                             </Box>
-                          </AccordionSummary>
-                          <AccordionDetails>
-                            {item.images.length > 0 ? (
-                              <ImageList cols={3} rowHeight={164} sx={{ mt: 1 }}>
-                                {item.images.map((img, idx) => (
-                                  <ImageListItem key={idx}>
-                                    <img
-                                      src={img}
-                                      alt={`${item.description} reference`}
-                                      loading="lazy"
-                                    />
-                                  </ImageListItem>
-                                ))}
-                              </ImageList>
+                          </TableCell>
+                        );
+                      }
+                      if (col.key === "store") {
+                        return (
+                          <TableCell key={col.key}>
+                            <Chip
+                              label={order.store_name || "N/A"}
+                              size="small"
+                              variant="outlined"
+                            />
+                          </TableCell>
+                        );
+                      }
+                      if (col.key === "assigned_to") {
+                        return (
+                          <TableCell key={col.key}>
+                            {order.master_name ? (
+                              <Chip
+                                label={order.master_name}
+                                size="small"
+                                variant="outlined"
+                                color="primary"
+                              />
                             ) : (
                               <Typography variant="body2" color="text.secondary">
-                                No images available
+                                Unassigned
                               </Typography>
                             )}
-                          </AccordionDetails>
-                        </Accordion>
-                      ))}
-                    </List>
-                  </AccordionDetails>
-                </Accordion>
-
-                {/* Measurements */}
-                {order.measurements && (
-                  <Accordion sx={{ mb: 2 }}>
-                    <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                        <MeasurementIcon color="action" sx={{ mr: 1 }} />
-                        <Typography>Measurements</Typography>
-                      </Box>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Grid container spacing={2}>
-                        {/* Standard Measurements */}
-                        {Object.entries(order.measurements)
-                          .filter(([key]) => !['measurement_id', 'order_id', 'SL', 'others'].includes(key))
-                          .map(([key, value]) => (
-                            <Grid item xs={6} sm={4} md={3} key={key}>
-                              <Paper sx={{ p: 1 }} variant="outlined">
-                                <Typography variant="body2">
-                                  <strong>{key}:</strong> {value || 'N/A'}
-                                </Typography>
-                              </Paper>
-                            </Grid>
-                          ))}
-                      </Grid>
-
-                      {/* SL Measurements */}
-                      {order.measurements.SL && Object.keys(order.measurements.SL).length > 0 && (
-                        <Box sx={{ mt: 3 }}>
-                          <Typography variant="subtitle2" gutterBottom>
-                            SL Measurements
+                          </TableCell>
+                        );
+                      }
+                      return (
+                        <TableCell key={col.key}>
+                          <Typography variant="body2">
+                            {order[col.key] || "N/A"}
                           </Typography>
-                          <Grid container spacing={2}>
-                            {Object.values(order.measurements.SL).map((sl, idx) => (
-                              <Grid item xs={12} sm={6} md={4} key={idx}>
-                                <Paper sx={{ p: 2 }} variant="outlined">
-                                  <Typography variant="body2">
-                                    <strong>Position:</strong> {sl.position}
-                                  </Typography>
-                                  <Typography variant="body2">
-                                    <strong>L:</strong> {sl.L}
-                                  </Typography>
-                                  <Typography variant="body2">
-                                    <strong>W:</strong> {sl.W}
-                                  </Typography>
-                                  <Typography variant="body2">
-                                    <strong>A:</strong> {sl.A}
-                                  </Typography>
-                                </Paper>
-                              </Grid>
-                            ))}
-                          </Grid>
-                        </Box>
-                      )}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                ))
+              )}
+            </TableBody>
+          </Table>
+        </TableContainer>
 
-                      {/* Custom Measurements */}
-                      {order.measurements.others && order.measurements.others.length > 0 && (
-                        <Box sx={{ mt: 3 }}>
-                          <Typography variant="subtitle2" gutterBottom>
-                            Custom Measurements
-                          </Typography>
-                          <Grid container spacing={2}>
-                            {order.measurements.others.map((custom, idx) => (
-                              <Grid item xs={12} sm={6} md={4} key={idx}>
-                                <Paper sx={{ p: 1 }} variant="outlined">
-                                  <Typography variant="body2">
-                                    <strong>{custom.name}:</strong> {custom.value}
-                                  </Typography>
-                                </Paper>
-                              </Grid>
-                            ))}
-                          </Grid>
-                        </Box>
-                      )}
-                    </AccordionDetails>
-                  </Accordion>
-                )}
-
-                {/* Status History */}
-                <Accordion sx={{ mb: 2 }}>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <StatusIcon color="action" sx={{ mr: 1 }} />
-                      <Typography>Status History ({order.status_history.length})</Typography>
-                    </Box>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <List>
-                      {order.status_history.map((status) => (
-                        <ListItem key={status.status_history_id} alignItems="flex-start">
-                          <ListItemAvatar>
-                            <Avatar sx={{ bgcolor: 'primary.main', width: 32, height: 32 }}>
-                              <PersonIcon fontSize="small" />
-                            </Avatar>
-                          </ListItemAvatar>
-                          <ListItemText
-                            primary={
-                              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                <Typography variant="subtitle2" sx={{ flex: 1 }}>
-                                  {formatStatusText(status.status)}
-                                </Typography>
-                                <Typography variant="caption">
-                                  {formatDateTime(status.change_date)}
-                                </Typography>
-                              </Box>
-                            }
-                            secondary={
-                              <>
-                                <Typography variant="body2">
-                                  By: {status.master_name}
-                                </Typography>
-                                {status.notes && (
-                                  <Typography variant="body2">
-                                    Notes: {status.notes}
-                                  </Typography>
-                                )}
-                              </>
-                            }
-                          />
-                        </ListItem>
-                      ))}
-                    </List>
-                  </AccordionDetails>
-                </Accordion>
-
-                {/* Transactions */}
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                      <TransactionIcon color="action" sx={{ mr: 1 }} />
-                      <Typography>Transactions ({order.transactions.length})</Typography>
-                    </Box>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <TableContainer>
-                      <Table size="small">
-                        <TableHead>
-                          <TableRow>
-                            <TableCell>Date</TableCell>
-                            <TableCell align="right">Amount</TableCell>
-                            <TableCell>Method</TableCell>
-                            <TableCell>Notes</TableCell>
-                          </TableRow>
-                        </TableHead>
-                        <TableBody>
-                          {order.transactions.map((txn) => (
-                            <TableRow key={txn.transaction_id}>
-                              <TableCell>{formatDateTime(txn.transaction_date)}</TableCell>
-                              <TableCell align="right">{formatCurrency(txn.amount)}</TableCell>
-                              <TableCell>{txn.payment_method}</TableCell>
-                              <TableCell>{txn.notes}</TableCell>
-                            </TableRow>
-                          ))}
-                        </TableBody>
-                      </Table>
-                    </TableContainer>
-                  </AccordionDetails>
-                </Accordion>
-              </AccordionDetails>
-            </Accordion>
-          ))}
-        </Box>
-      )}
-    </Box>
+        {orders.length > 0 && (
+          <Box sx={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'center', 
+            p: 2,
+            borderTop: `1px solid ${theme.palette.divider}`
+          }}>
+            <Typography variant="body2" color="text.secondary">
+              Showing {(page - 1) * limit + 1} to {Math.min(page * limit, (page - 1) * limit + orders.length)} of results
+            </Typography>
+            <Pagination
+              count={totalPages}
+              page={page}
+              onChange={(_, value) => setPage(value)}
+              shape="rounded"
+              size={isMobile ? "small" : "medium"}
+              siblingCount={1}
+              boundaryCount={1}
+            />
+          </Box>
+        )}
+      </Card>
+    </Container>
   );
 };
 
-export default CustomerView;
+export default ViewPurchasesPage;

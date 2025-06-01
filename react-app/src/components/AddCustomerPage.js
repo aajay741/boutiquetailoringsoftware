@@ -839,7 +839,7 @@ const CustomerManagement = () => {
   const fetchStores = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost/login/public_html/api/stores/getStores.php');
+      const response = await fetch('http://localhost/boutiquetailoringsoftware/public_html/api/stores/getStores.php');
       const data = await response.json();
       
       if (response.ok) {
@@ -862,7 +862,7 @@ const CustomerManagement = () => {
     try {
       setLoading(true);
 
-      const response = await fetch('http://localhost/login/public_html/api/orders/addCustomer.php', {
+      const response = await fetch('http://localhost/boutiquetailoringsoftware/public_html/api/orders/addCustomer.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

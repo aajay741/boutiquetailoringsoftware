@@ -200,21 +200,7 @@ file_put_contents('php_error.log', "Inserted new customer: $customerId\n", FILE_
     file_put_contents('php_error.log', "Inserted order ID: $orderId\n", FILE_APPEND);
     $response['order_id'] = $orderId;
 
-    // Insert initial status history
-    $notes = "Order created";
-    $stmt = $conn->prepare("INSERT INTO order_status_history (order_id, status, changed_by, notes) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("isis", $orderId, $status, $masterIdTakenBy, $notes);
-    $stmt->execute();
-
-    // Record advance payment if any
-    if ($advance > 0) {
-        $paymentMethod = 'cash'; // Default, you can get this from data if available
-        $notes = "Initial advance payment";
-        
-        $stmt = $conn->prepare("INSERT INTO transactions (order_id, amount, payment_method, notes) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("idss", $orderId, $advance, $paymentMethod, $notes);
-        $stmt->execute();
-    }
+  
 
     // Create directories for order uploads
     $orderUploadDir = rtrim($uploadConfig['upload_dir'], '/') . "/$orderId/particulars/";
@@ -379,8 +365,26 @@ file_put_contents('php_error.log', "Inserted new customer: $customerId\n", FILE_
         }
     }
 
+    // New code block for invoice number generation
+    $stmt = $conn->prepare("SELECT store_code FROM stores WHERE store_id = ?");
+    $stmt->bind_param("i", $storeId);
+    $stmt->execute();
+    $stmt->bind_result($storeCode);
+    $stmt->fetch();
+    $stmt->close();
+
+    $invoiceNumber = $storeCode . '_' . str_pad($orderId, 4, '0', STR_PAD_LEFT);
+
+    $stmt = $conn->prepare("UPDATE orders SET invoice = ? WHERE order_id = ?");
+    $stmt->bind_param("si", $invoiceNumber, $orderId);
+    if (!$stmt->execute()) {
+        throw new Exception("Failed to update invoice: " . $stmt->error);
+    }
+    $stmt->close();
+
     $conn->commit();
 
+    $response['invoiceNumber'] = $invoiceNumber;
     $response['success'] = true;
     $response['message'] = "Order created successfully";
     http_response_code(201);

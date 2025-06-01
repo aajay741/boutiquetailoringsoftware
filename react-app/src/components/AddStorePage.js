@@ -463,7 +463,7 @@ const StoreManagement = () => {
   const fetchStores = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost/login/public_html/api/stores/getStores.php');
+      const response = await fetch('http://localhost/boutiquetailoringsoftware/public_html/api/stores/getStores.php');
       const data = await response.json();
       
       if (response.ok) {
@@ -504,7 +504,7 @@ const confirmDelete = async () => {
       throw new Error("No store ID provided for deletion");
     }
 
-    const response = await fetch(`http://localhost/login/public_html/api/stores/deleteStore.php?id=${deleteConfirm.storeId}`, {
+    const response = await fetch(`http://localhost/boutiquetailoringsoftware/public_html/api/stores/deleteStore.php?id=${deleteConfirm.storeId}`, {
       method: 'DELETE'
     });
     
@@ -534,8 +534,8 @@ const confirmDelete = async () => {
   const handleSubmitStore = async (storeData) => {
     try {
       const url = isEdit 
-        ? `http://localhost/login/public_html/api/stores/updateStore.php?id=${currentStore.store_id}`
-        : 'http://localhost/login/public_html/api/stores/addStore.php';
+        ? `http://localhost/boutiquetailoringsoftware/public_html/api/stores/updateStore.php?id=${currentStore.store_id}`
+        : 'http://localhost/boutiquetailoringsoftware/public_html/api/stores/addStore.php';
       
       const method = isEdit ? 'PUT' : 'POST';
 

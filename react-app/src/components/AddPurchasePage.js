@@ -66,6 +66,7 @@ const OrderFormWithMeasurements = () => {
 
   // Initial form state
   const initialFormData = {
+    storeId: '',
     orderTakenBy: {
       masterId: '',
     },
@@ -116,21 +117,27 @@ const OrderFormWithMeasurements = () => {
   // Form state
   const [formData, setFormData] = useState(initialFormData);
   const [measurements, setMeasurements] = useState(initialMeasurements);
+  const [store, setStore] = useState('');
 
   // Fetch API data
   useEffect(() => {
     const fetchData = async () => {
       try {
         const [storesResponse, mastersResponse] = await Promise.all([
-          axios.get('http://localhost/login/public_html/api/stores/getStores.php'),
-          axios.get('http://localhost/login/public_html/api/getUsers.php')
+          axios.get('http://localhost/boutiquetailoringsoftware/public_html/api/stores/getStores.php'),
+          axios.get('http://localhost/boutiquetailoringsoftware/public_html/api/getUsers.php')
         ]);
 
         // Validate and set stores data
         if (!Array.isArray(storesResponse?.data?.stores)) {
           throw new Error('Invalid stores data format');
         }
-        setStores(storesResponse.data.stores);
+        setStores(
+          storesResponse.data.stores.map(store => ({
+            id: store.store_id,
+            name: store.store_name
+          }))
+        );
 
         // Validate and set masters data
         if (!Array.isArray(mastersResponse?.data?.users)) {
@@ -227,19 +234,26 @@ const OrderFormWithMeasurements = () => {
 
   const handleImageUpload = (index, files) => {
     if (!files || files.length === 0) return;
-    
+
     setFormData(prev => {
       const updatedParticulars = [...prev.particulars];
-      const newImages = Array.from(files).map(file => ({
-        file,
-        preview: URL.createObjectURL(file),
-        id: Date.now() + Math.random()
-      }));
-      
+      // Only add files that are not already present (by name and size)
+      const existingFiles = updatedParticulars[index].images.map(img => img.file.name + img.file.size);
+      const newImages = Array.from(files)
+        .filter(file => !existingFiles.includes(file.name + file.size))
+        .map(file => ({
+          file,
+          preview: URL.createObjectURL(file),
+          id: Date.now() + Math.random()
+        }));
+
       updatedParticulars[index].images = [...updatedParticulars[index].images, ...newImages];
-      
+
       return { ...prev, particulars: updatedParticulars };
     });
+
+    // Reset the input value so the same file can be selected again if needed
+    document.getElementById(`particular-images-${index}`).value = '';
   };
 
   const removeImage = (particularIndex, imageId) => {
@@ -389,7 +403,7 @@ const OrderFormWithMeasurements = () => {
       });
 
       const response = await axios.post(
-        'http://localhost/login/public_html/api/orders/addCustomer.php',
+        'http://localhost/boutiquetailoringsoftware/public_html/api/orders/addCustomer.php',
         formDataToSend,
         {
           headers: {
@@ -400,15 +414,15 @@ const OrderFormWithMeasurements = () => {
 
       // Handle response
       if (response.data.success) {
-        // Reset form on successful submission
         setFormData(initialFormData);
         setMeasurements(initialMeasurements);
-        
+        setStore(stores[0]?.id || ''); // <-- Reset store to first store or empty
         setSubmitStatus({
           loading: false,
           success: true,
           error: null,
-          orderId: response.data.order_id
+          orderId: response.data.order_id,
+          invoiceNumber: response.data.invoiceNumber
         });
       } else {
         setSubmitStatus({
@@ -495,7 +509,7 @@ const OrderFormWithMeasurements = () => {
           severity="success" 
           sx={{ width: '100%' }}
         >
-          Order submitted successfully! Order ID: {submitStatus.orderId}
+          Order submitted successfully! Order ID: {submitStatus.invoiceNumber}
         </Alert>
       </Snackbar>
 
@@ -544,22 +558,25 @@ const OrderFormWithMeasurements = () => {
             <Grid item xs={12} md={6}>
               <TextField
                 select
-                fullWidth
                 label="Store"
+                variant="outlined"
                 value={formData.customer.storeId}
-                onChange={(e) => handleChange('customer.storeId', e.target.value)}
-                InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <StoreIcon color="action" />
-                    </InputAdornment>
-                  ),
+                onChange={e => {
+                  setStore(e.target.value);
+                  setFormData(prev => ({
+                    ...prev,
+                    customer: {
+                      ...prev.customer,
+                      storeId: e.target.value
+                    }
+                  }));
                 }}
-                required
+                size={isMobile ? "small" : "medium"}
+                sx={{ minWidth: 120, flex: 1 }}
               >
-                {stores.map((store) => (
-                  <MenuItem key={store.store_id} value={store.store_id}>
-                    {store.store_name}
+                {stores.map((s) => (
+                  <MenuItem key={s.id} value={s.id}>
+                    {s.name}
                   </MenuItem>
                 ))}
               </TextField>
@@ -758,8 +775,8 @@ const OrderFormWithMeasurements = () => {
             >
               Add Item
             </Button>
-          </Box>
-          
+          </Box
+          >
           {formData.particulars.map((particular, index) => (
             <Paper key={index} sx={{ p: 2, mb: 2, borderLeft: `3px solid ${theme.palette.primary.main}` }}>
               <Grid container spacing={2} alignItems="center">

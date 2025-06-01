@@ -53,7 +53,7 @@ function LoginPage() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost/login/public_html/api/login.php', {
+      const response = await fetch('http://localhost/boutiquetailoringsoftware/public_html/api/login.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

@@ -452,7 +452,7 @@ const UserManagement = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost/login/public_html/api/getUsers.php');
+      const response = await fetch('http://localhost/boutiquetailoringsoftware/public_html/api/getUsers.php');
       const data = await response.json();
       
       if (response.ok) {
@@ -489,7 +489,7 @@ const UserManagement = () => {
 
   const confirmDelete = async () => {
     try {
-      const response = await fetch(`http://localhost/login/public_html/api/deleteUser.php?id=${deleteConfirm.userId}`, {
+      const response = await fetch(`http://localhost/boutiquetailoringsoftware/public_html/api/deleteUser.php?id=${deleteConfirm.userId}`, {
         method: 'DELETE'
       });
       
@@ -526,8 +526,8 @@ const UserManagement = () => {
       });
 
       const url = isEdit 
-        ? `http://localhost/login/public_html/api/updateUser.php?id=${currentUser.id}`
-        : 'http://localhost/login/public_html/api/addMaster.php';
+        ? `http://localhost/boutiquetailoringsoftware/public_html/api/updateUser.php?id=${currentUser.id}`
+        : 'http://localhost/boutiquetailoringsoftware/public_html/api/addMaster.php';
       
       const method = isEdit ? 'PUT' : 'POST';
 
